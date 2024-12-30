@@ -1,6 +1,10 @@
 import React from 'react'
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+    // Thêm logic xử lý form ở đây (ví dụ: gửi dữ liệu tới API)
+  };
   return (
     <section>
       <div className='px-4 mx-auto max-w-screen-md'>
@@ -9,7 +13,7 @@ const Contact = () => {
           Got a technical issue? Want to send feedback about a beta feature? 
           let us know.
         </p>
-        <form  className='space-y-8'>
+        <form onSubmit={handleSubmit} className='space-y-8'>
           <div>
             <label htmlFor="email" className='form__label'>
               Your Email
