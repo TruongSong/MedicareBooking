@@ -35,7 +35,10 @@ const Doctors = () => {
             lg:grid-cols-4 gap-5"
           >
             {doctors.map((doctor) => (
-              <DoctorCard key={doctor.id} doctor={doctor} />
+              <DoctorCard 
+              to={`/doctors/${doctor.id}`}
+              key={doctor.id}
+              doctor={doctor} />
             ))}
           </div>
         </div>

@@ -3,7 +3,7 @@ import starIcon from "../../assets/images/Star.png";
 import { Link } from "react-router-dom";
 
 import { BsArrowRight } from "react-icons/bs";
-const DoctorCard = ({ doctor }) => {
+const DoctorCard = ({ doctor, to }) => {
   const {
     name,
     avgRating,
@@ -73,7 +73,7 @@ const DoctorCard = ({ doctor }) => {
         </div>
 
         <Link
-          to="/doctors"
+          to={to}
           className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E]
                  mt-[30px] mx-auto flex items-center justify-center
                   group hover:bg-primaryColor hover:border-none"

@@ -8,7 +8,10 @@ const DoctorList = () => {
    gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]'>
     {
         doctors.map((doctor) => (
-            <DoctorCard key={doctor.id} doctor={doctor}/>
+            <DoctorCard
+            to='/doctors'
+             key={doctor.id}
+             doctor={doctor}/>
         ))
     }
    </div>
